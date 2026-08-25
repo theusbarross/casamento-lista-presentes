@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus & Natyelly — Lista de Presentes & Contagem Regressiva</title>
+    
+    <!-- Meta Tags para Compartilhamento em Redes Sociais (WhatsApp, Instagram, etc) -->
+    <meta property="og:title" content="Casamento de Matheus & Natyelly — 28 de Outubro de 2026">
+    <meta property="og:description" content="Acompanhe a contagem regressiva e confira nossa lista de presentes divertida com opções simbólicas via PIX!">
+    <meta property="og:type" content="website">
+    
+    <!-- Fontes do Google: Elegantes, Românticas e Modernas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Biblioteca para gerar o QR Code na tela -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- ========================================================================== -->
+    <!-- ESTILOS VISUAIS (CSS) - Design Delicado, Luxuoso e 100% Responsivo        -->
+    <!-- ========================================================================== -->
+    <style>
+        /* --- 1. PALETA DE CORES E VARIÁVEIS DO TEMA --- */
+        :root {
+            --cor-primaria: #8B7355;        /* Dourado Nobre / Ocre sofisticado */
+            --cor-primaria-escura: #6d583f; /* Tom mais escuro para botões ativos */
+            --cor-secundaria: #A3B18A;      /* Verde Oliva / Sálvia suave */
+            --cor-fundo: #FAFAF7;           /* Off-white acolhedor */
+            --cor-card: #FFFFFF;            /* Branco puro para os cartões */
+            --cor-texto: #333333;           /* Grafite para leitura nítida */
+            --cor-texto-suave: #666666;     /* Cinza médio para descrições */
+            --cor-destaque: #D4A373;        /* Terracota suave / Ouro rose */
+            --cor-borda: #EAE5D9;           /* Linhas e divisórias sutis */
+            
+            --fonte-titulo: 'Great Vibes', cursive;
+            --fonte-serifa: 'Cormorant Garamond', serif;
+            --fonte-corpo: 'Montserrat', sans-serif;
+            
+            --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --sombra-card: 0 15px 35px rgba(139, 115, 85, 0.08);
+            --borda-arredondada: 16px;
+            --transicao: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Reset e Configurações Básicas */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fonte-corpo);
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Fundo decorativo sutil com iluminação suave */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 15% 20%, rgba(212, 163, 115, 0.04) 0%, transparent 40%),
+                        radial-gradient(circle at 85% 75%, rgba(163, 177, 138, 0.04) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* --- 2. BARRA DE NAVEGAÇÃO SUPERIOR (FIXA) --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(250, 250, 247, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--cor-borda);
+            z-index: 1000;
+            padding: 14px 0;
+        }
+
+        .navbar-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .navbar-brand {
+            font-family: var(--fonte-titulo);
+            font-size: 2.2rem;
+            color: var(--cor-primaria);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar-brand i {
+            font-size: 1.1rem;
+            color: #d9777f;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--cor-texto);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transicao);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--cor-primaria);
+        }
+
+        .nav-btn-destaque {
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
+            color: #fff !important;
+            padding: 9px 20px !important;
+            border-radius: 30px;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.25);
+        }
+
+        .nav-btn-destaque:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(139, 115, 85, 0.35);
+        }
+
+        /* --- 3. CAPA PRINCIPAL (HERO) COM CONTAGEM REGRESSIVA --- */
+        .hero-section {
+            padding-top: 140px;
+            padding-bottom: 70px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(234, 229, 217, 0.4) 0%, rgba(250, 250, 247, 1) 100%);
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--cor-primaria);
+            background: rgba(139, 115, 85, 0.1);
+            padding: 6px 22px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(139, 115, 85, 0.2);
+        }
+
+        .hero-title {
+            font-family: var(--fonte-titulo);
+            font-size: clamp(3.8rem, 9vw, 6.5rem);
+            color: var(--cor-primaria);
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero-title .e-simbolo {
+            font-family: var(--fonte-serifa);
+            font-style: italic;
+            font-size: 0.7em;
+            color: var(--cor-destaque);
+            margin: 0 10px;
+        }
+
+        .hero-date {
+            font-family: var(--fonte-serifa);
+            font-size: 2rem;
+            letter-spacing: 7px;
+            color: var(--cor-texto-suave);
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        /* Botão para ir direto à lista de presentes */
+        .hero-btn-wrap {
+            margin-bottom: 45px;
+        }
+
+        .btn-principal {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+            color: #ffffff;
+            padding: 14px 34px;
+            border-radius: 35px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(139, 115, 85, 0.35);
+            transition: var(--transicao);
+        }
+
+        .btn-principal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(139, 115, 85, 0.45);
+        }
+
+        /* --- 4. BLOCO DA CONTAGEM REGRESSIVA (COUNTDOWN) --- */
+        .countdown-wrapper {
+            background: #ffffff;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 30px 24px;
+            border-radius: 24px;
+            box-shadow: var(--sombra-card);
+            border: 1px solid var(--cor-borda);
+        }
+
+        .countdown-header {
+            font-family: var(--fonte-serifa);
+            font-size: 1.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--cor-primaria);
+            margin-bottom: 22px;
+            font-weight: 600;
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .countdown-item {
+            background: var(--cor-fundo);
+            padding: 18px 10px;
+            border-radius: 16px;
+            border: 1px solid rgba(139, 115, 85, 0.15);
+            transition: var(--transicao);
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-3px);
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .countdown-number {
+            font-family: var(--fonte-serifa);
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--cor-primaria);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .countdown-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--cor-texto-suave);
+            font-weight: 600;
+        }
+
+        /* --- 5. SEÇÃO: LISTA DE PRESENTES DIVERTIDA --- */
+        section {
+            padding: 85px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-subtitle {
+            font-family: var(--fonte-titulo);
+            font-size: 2.6rem;
+            color: var(--cor-destaque);
+            line-height: 1;
+            margin-bottom: -10px;
+        }
+
+        .section-title {
+            font-family: var(--fonte-serifa);
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--cor-primaria);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: "❦";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.1rem;
+            color: var(--cor-destaque);
+        }
+
+        /* Mensagem de Introdução Divertida do Casal */
+        .presentes-intro-card {
+            background: #ffffff;
+            border-radius: var(--borda-arredondada);
+            padding: 35px 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--cor-borda);
+            box-shadow: var(--sombra-card);
+            text-align: center;
+        }
+
+        .presentes-intro-card h3 {
+            font-family: var(--fonte-serifa);
+            font-size: 1.6rem;
+            color: var(--cor-primaria);
+            margin-bottom: 15px;
+        }
+
+        .presentes-intro-card p {
+            font-size: 1.05rem;
+            color: var(--cor-texto);
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .pix-destaque-info {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(139, 115, 85, 0.08);
+            border: 1px solid rgba(139, 115, 85, 0.2);
+            color: var(--cor-primaria-escura);
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        /* Botões de Filtros */
+        .presentes-filtros {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filtro-btn {
+            background: #ffffff;
+            border: 1px solid var(--cor-borda);
+            color: var(--cor-texto-suave);
+            padding: 9px 22px;
+            border-radius: 25px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transicao);
+        }
+
+        .filtro-btn.active, .filtro-btn:hover {
+            background: var(--cor-primaria);
+            color: #ffffff;
+            border-color: var(--cor-primaria);
+            box-shadow: 0 4px 12px rgba(139, 115, 85, 0.25);
+        }
+
+        /* Grid dos Presentes */
+        .presentes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 26px;
+        }
+
+        .presente-card {
+            background: #ffffff;
+            border-radius: var(--borda-arredondada);
+            overflow: hidden;
+            box-shadow: var(--sombra-card);
+            border: 1px solid var(--cor-borda);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transicao);
+            position: relative;
+        }
+
+        .presente-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(139, 115, 85, 0.14);
+        }
+
+        .presente-imagem {
+            height: 160px;
+            background: #f7f3ec;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .presente-imagem i {
+            font-size: 3.8rem;
+            color: var(--cor-primaria);
+            opacity: 0.85;
+            transition: var(--transicao);
+        }
+
+        .presente-card:hover .presente-imagem i {
+            transform: scale(1.15) rotate(3deg);
+        }
+
+        .presente-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--cor-primaria);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .presente-corpo {
+            padding: 22px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .presente-titulo {
+            font-family: var(--fonte-corpo);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--cor-texto);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            min-height: 44px;
+        }
+
+        .presente-preco-box {
+            margin: 12px 0 16px 0;
+            padding: 10px 0;
+            border-top: 1px dashed var(--cor-borda);
+            border-bottom: 1px dashed var(--cor-borda);
+            text-align: center;
+        }
+
+        .presente-preco-label {
+            font-size: 0.75rem;
+            color: var(--cor-texto-suave);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .presente-preco-valor {
+            font-family: var(--fonte-serifa);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cor-primaria);
+        }
+
+        .btn-presentear {
+            width: 100%;
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+            color: #ffffff;
+            padding: 11px 16px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transicao);
+        }
+
+        .btn-presentear:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 18px rgba(139, 115, 85, 0.35);
+        }
+
+        /* --- 6. MODAL INTERATIVO DO PIX & MENSAGEM --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-container {
+            background: #ffffff;
+            border-radius: 24px;
+            max-width: 480px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f0f0f0;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #666;
+            transition: var(--transicao);
+        }
+
+        .modal-close-btn:hover {
+            background: #e0e0e0;
+            color: #000;
+        }
+
+        .modal-header-pix {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .modal-header-pix h3 {
+            font-family: var(--fonte-serifa);
+            font-size: 1.8rem;
+            color: var(--cor-primaria);
+            margin-bottom: 6px;
+        }
+
+        .pix-badge-oficial {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e6f4ea;
+            color: #137333;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+
+        .modal-item-selecionado {
+            background: var(--cor-fundo);
+            padding: 14px;
+            border-radius: 14px;
+            margin: 16px 0;
+            text-align: center;
+            border: 1px solid var(--cor-borda);
+        }
+
+        .modal-item-nome {
+            font-weight: 600;
+            color: var(--cor-texto);
+            margin-bottom: 4px;
+            font-size: 1rem;
+        }
+
+        .modal-item-valor {
+            font-family: var(--fonte-serifa);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cor-primaria);
+        }
+
+        .pix-qrcode-box {
+            background: #ffffff;
+            padding: 12px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px auto;
+            border: 2px solid var(--cor-borda);
+            width: 195px;
+            height: 195px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .pix-opcoes-copia {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .pix-box-item {
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .pix-box-item label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--cor-texto-suave);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .pix-input-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pix-chave-input {
+            flex-grow: 1;
+            border: none;
+            background: transparent;
+            font-size: 0.85rem;
+            color: #2d3748;
+            font-family: monospace;
+            outline: none;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .btn-copiar-pix {
+            background: var(--cor-primaria);
+            color: #ffffff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transicao);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-copiar-pix:hover {
+            background: var(--cor-primaria-escura);
+            transform: translateY(-1px);
+        }
+
+        .btn-copiar-pix.copiado {
+            background: #198754 !important;
+        }
+
+        .form-grupo {
+            margin-bottom: 16px;
+            text-align: left;
+        }
+
+        .form-grupo label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--cor-texto);
+        }
+
+        .form-controle {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid var(--cor-borda);
+            border-radius: 10px;
+            font-family: var(--fonte-corpo);
+            font-size: 0.95rem;
+            color: var(--cor-texto);
+            background: #ffffff;
+            transition: var(--transicao);
+        }
+
+        .form-controle:focus {
+            outline: none;
+            border-color: var(--cor-primaria);
+            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.15);
+        }
+
+        /* --- 7. RODAPÉ (FOOTER) --- */
+        footer {
+            background: #f1ede4;
+            border-top: 1px solid var(--cor-borda);
+            padding: 50px 20px 30px 20px;
+            text-align: center;
+        }
+
+        .footer-monograma {
+            font-family: var(--fonte-titulo);
+            font-size: 3.2rem;
+            color: var(--cor-primaria);
+            margin-bottom: 8px;
+        }
+
+        .footer-quote {
+            font-family: var(--fonte-serifa);
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--cor-texto-suave);
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: #777777;
+        }
+
+        /* --- 8. RESPONSIVIDADE --- */
+        @media (max-width: 650px) {
+            .countdown-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .countdown-number {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none; /* Em telas muito pequenas o menu é simplificado */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================================================================== -->
+    <!-- 1. BARRA DE NAVEGAÇÃO SUPERIOR (FIXA)                                      -->
+    <!-- ========================================================================== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#inicio" class="navbar-brand">
+                Matheus <i class="fa-solid fa-heart"></i> Natyelly
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#contagem">Contagem Regressiva</a></li>
+                <li><a href="#presentes" class="nav-btn-destaque"><i class="fa-solid fa-gift"></i> Lista de Presentes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========================================================================== -->
+    <!-- 2. CAPA PRINCIPAL (HERO) COM A CONTAGEM REGRESSIVA                         -->
+    <!-- ========================================================================== -->
+    <header class="hero-section" id="inicio">
+        <div class="hero-badge">Salve Esta Data</div>
+        
+        <h1 class="hero-title">
+            Matheus <span class="e-simbolo">&</span> Natyelly
+        </h1>
+        
+        <!-- Data do Casamento (28 de Outubro de 2026) -->
+        <div class="hero-date">
+            28 . 10 . 2026
+        </div>
+
+        <div class="hero-btn-wrap">
+            <a href="#presentes" class="btn-principal">
+                <i class="fa-solid fa-gift"></i> Ver Lista de Presentes
+            </a>
+        </div>
+
+        <!-- Bloco do Cronômetro Regressivo em Tempo Real -->
+        <div class="countdown-wrapper" id="contagem">
+            <div class="countdown-header">Faltam Apenas</div>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="dias">00</div>
+                    <div class="countdown-label">Dias</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="horas">00</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutos">00</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="segundos">00</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================================== -->
+    <!-- 3. SEÇÃO: LISTA DE PRESENTES DIVERTIDA (INTEGRAÇÃO PIX)                   -->
+    <!-- ========================================================================== -->
+    <section id="presentes">
+        <div class="section-header">
+            <div class="section-subtitle">Mimos para os Noivos</div>
+            <h2 class="section-title">Lista de Presentes</h2>
+        </div>
+
+        <!-- Introdução Bem-Humorada do Casal -->
+        <div class="presentes-intro-card">
+            <h3>Nossa lista de presentes é um pouquinho diferente… 😁</h3>
+            <p>
+                Quando começamos a pensar na lista de casamento, percebemos uma coisa: panela a gente já tem, micro-ondas também, móveis estão no lugar e, graças a Deus, nossa casa já está praticamente completa. Então pensamos: pra que inventar mais espaço no armário só pra colocar outra panela? 😂
+            </p>
+            <p>
+                Por isso, resolvemos fazer diferente e criar uma lista de presentes divertida, com algumas opções nada convencionais para vocês escolherem como querem nos presentear.
+            </p>
+            <div class="pix-destaque-info">
+                <i class="fa-brands fa-pix"></i> Os presentes são simbólicos e os valores são recebidos diretamente via PIX pelos noivos! 🥰❤️
+            </div>
+        </div>
+
+        <!-- Filtros de Categorias -->
+        <div class="presentes-filtros">
+            <button class="filtro-btn active" onclick="filtrarPresentes('todos')">Todos os Presentes</button>
+            <button class="filtro-btn" onclick="filtrarPresentes('ate50')">Até R$ 50</button>
+            <button class="filtro-btn" onclick="filtrarPresentes('50a100')">R$ 50 a R$ 100</button>
+            <button class="filtro-btn" onclick="filtrarPresentes('acima100')">Acima de R$ 100</button>
+        </div>
+
+        <!-- Grade de Presentes (Renderizada dinamicamente pelo JavaScript) -->
+        <div class="presentes-grid" id="gradePresentes"></div>
+    </section>
+
+    <!-- ========================================================================== -->
+    <!-- 4. MODAL OFICIAL PARA PRESENTEAR COM QR CODE PIX & COPIA E COLA           -->
+    <!-- ========================================================================== -->
+    <div class="modal-overlay" id="modalPresente">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="fecharModalPresente()" aria-label="Fechar Modal">&times;</button>
+            
+            <div class="modal-header-pix">
+                <i class="fa-solid fa-gift" style="font-size: 2.2rem; color: var(--cor-primaria); margin-bottom: 8px;"></i>
+                <h3>Presentear os Noivos</h3>
+                <div>
+                    <span class="pix-badge-oficial"><i class="fa-brands fa-pix"></i> PIX Oficial Banco Central</span>
+                </div>
+            </div>
+
+            <!-- Resumo do Item Selecionado -->
+            <div class="modal-item-selecionado">
+                <div class="modal-item-nome" id="modalNomeItem">Carregando...</div>
+                <div class="modal-item-valor" id="modalValorItem">R$ 0,00</div>
+                <small style="color: var(--cor-texto-suave); font-size: 0.8rem;">Beneficiário: Matheus e Natyelly</small>
+            </div>
+
+            <!-- QR Code do PIX (EMV / BR Code oficial para leitura por qualquer banco) -->
+            <div style="text-align: center; margin-bottom: 15px;">
+                <p style="font-size: 0.85rem; color: var(--cor-texto-suave); margin-bottom: 8px; font-weight: 500;">
+                    Abra o app do seu banco e escaneie o QR Code abaixo:
+                </p>
+                <div class="pix-qrcode-box" id="qrcodePix"></div>
+            </div>
+
+            <!-- Opções de Cópia: PIX Copia e Cola e Chave Simples -->
+            <div class="pix-opcoes-copia">
+                <!-- 1. Código Oficial PIX Copia e Cola -->
+                <div class="pix-box-item">
+                    <label><i class="fa-solid fa-qrcode"></i> PIX Copia e Cola (Recomendado):</label>
+                    <div class="pix-input-group">
+                        <input type="text" class="pix-chave-input" id="inputPixPayload" readonly value="">
+                        <button class="btn-copiar-pix" id="btnCopiarPayload" onclick="copiarPixPayload()">
+                            <i class="fa-regular fa-copy"></i> Copiar Código
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Chave Simples (Telefone/Celular) -->
+                <div class="pix-box-item">
+                    <label><i class="fa-solid fa-mobile-screen-button"></i> Chave Telefone:</label>
+                    <div class="pix-input-group">
+                        <input type="text" class="pix-chave-input" id="inputPixChaveSimples" readonly value="75997111942">
+                        <button class="btn-copiar-pix" id="btnCopiarChaveSimples" onclick="copiarChaveSimples()">
+                            <i class="fa-regular fa-copy"></i> Copiar Chave
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulário para o Convidado Assinar o Cartão -->
+            <form id="formMensagemPresente" onsubmit="finalizarPresente(event)">
+                <div class="form-grupo">
+                    <label for="nomeConvidadoPresente">Seu Nome / Família:</label>
+                    <input type="text" id="nomeConvidadoPresente" class="form-controle" placeholder="Ex: Tio Roberto e Família" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="recadoPresente">Mensagem de carinho para os noivos (Opcional):</label>
+                    <textarea id="recadoPresente" class="form-controle" rows="2" placeholder="Escreva aqui seus votos de felicidades aos noivos..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-presentear" style="width: 100%; padding: 13px; font-size: 1rem;">
+                    <i class="fa-solid fa-heart"></i> Concluir Presente
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================================================== -->
+    <!-- 5. RODAPÉ (FOOTER)                                                         -->
+    <!-- ========================================================================== -->
+    <footer>
+        <div class="footer-monograma">M & N</div>
+        <p class="footer-quote">
+            “O amor é a ponte que une dois corações em um único propósito.”
+        </p>
+        <p class="footer-copy">
+            Casamento de Matheus & Natyelly • 28 de Outubro de 2026<br>
+            Agradecemos de coração pelo carinho de todos os nossos convidados!
+        </p>
+    </footer>
+
+    <!-- ========================================================================== -->
+    <!-- CÓDIGO JAVASCRIPT (CRONÔMETRO, GERADOR OFICIAL BR CODE PIX & PRESENTES)     -->
+    <!-- ========================================================================== -->
+    <script>
+        /* -------------------------------------------------------------------------- */
+        /* 1. CONFIGURAÇÕES DOS NOIVOS (Dados da sua Chave PIX e Casamento)          */
+        /* -------------------------------------------------------------------------- */
+        const CONFIG_CASAMENTO = {
+            // Data do Casamento: Ano, Mês (0=Jan, 9=Outubro), Dia, Hora, Minuto
+            dataCasamento: new Date(2026, 9, 28, 17, 0, 0),
+            
+            // Sua Chave PIX
+            chavePix: "75997111942",
+            nomeBeneficiario: "MATHEUS E NATYELLY",
+            cidadeBeneficiario: "SALVADOR",
+
+            // URL do Web App gerado no Google Apps Script da sua planilha Google Sheets
+            // (Siga o passo a passo para colar o link gerado aqui)
+            urlGoogleSheets: "https://script.google.com/macros/s/AKfycbz5A_PMTmCTiJcJCxYiMAHmtsnDkaowlMo-DDViM82d_HJuykODLKfhhrUGDVcAzzqO/exec"
+        };
+
+        /* -------------------------------------------------------------------------- */
+        /* 2. GERADOR OFICIAL DE PIX (PADRÃO BR CODE / EMV DO BANCO CENTRAL)         */
+        /* -------------------------------------------------------------------------- */
+        
+        // Calcula o Checksum CRC16 CCITT (Polinômio 0x1021, valor inicial 0xFFFF)
+        function calcularCRC16(payload) {
+            let crc = 0xFFFF;
+            const polinomio = 0x1021;
+            for (let i = 0; i < payload.length; i++) {
+                crc ^= (payload.charCodeAt(i) << 8);
+                for (let j = 0; j < 8; j++) {
+                    if ((crc & 0x8000) !== 0) {
+                        crc = ((crc << 1) ^ polinomio) & 0xFFFF;
+                    } else {
+                        crc = (crc << 1) & 0xFFFF;
+                    }
+                }
+            }
+            return crc.toString(16).toUpperCase().padStart(4, '0');
+        }
+
+        // Formata campo no padrão Tag-Length-Value (TLV)
+        function formatarCampoTLV(id, valor) {
+            const tamanho = String(valor.length).padStart(2, '0');
+            return `${id}${tamanho}${valor}`;
+        }
+
+        // Gera a string oficial do PIX Copia e Cola (BR Code)
+        function gerarBRCodePix({ chave, nome, cidade, valor, txId = '***' }) {
+            let chaveLimpa = chave.trim();
+            const apenasDigitos = chaveLimpa.replace(/\D/g, '');
+            
+            // Se a chave for telefone celular brasileiro (10 ou 11 dígitos), formata para +55 (padrão Bacen)
+            if ((apenasDigitos.length === 10 || apenasDigitos.length === 11) && !chaveLimpa.includes('@')) {
+                if (!chaveLimpa.startsWith('+55')) {
+                    chaveLimpa = `+55${apenasDigitos}`;
+                }
+            }
+
+            // Normaliza o nome e cidade (remove acentos e limita tamanho)
+            const nomeFormatado = nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0, 25).toUpperCase();
+            const cidadeFormatada = cidade.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0, 15).toUpperCase();
+
+            // 00: Payload Format Indicator
+            let payload = formatarCampoTLV('00', '01');
+
+            // 26: Merchant Account Information (PIX)
+            let contaPix = formatarCampoTLV('00', 'br.gov.bcb.pix');
+            contaPix += formatarCampoTLV('01', chaveLimpa);
+            payload += formatarCampoTLV('26', contaPix);
+
+            // 52: Merchant Category Code
+            payload += formatarCampoTLV('52', '0000');
+
+            // 53: Transaction Currency (986 = Real BRL)
+            payload += formatarCampoTLV('53', '986');
+
+            // 54: Transaction Amount (Valor com 2 casas decimais)
+            if (valor && Number(valor) > 0) {
+                payload += formatarCampoTLV('54', Number(valor).toFixed(2));
+            }
+
+            // 58: Country Code
+            payload += formatarCampoTLV('58', 'BR');
+
+            // 59: Merchant Name
+            payload += formatarCampoTLV('59', nomeFormatado || 'MATHEUS E NATYELLY');
+
+            // 60: Merchant City
+            payload += formatarTLV('60', cidadeFormatada || 'SALVADOR');
+
+            // 62: Additional Data Field (TxID)
+            const campoTxId = formatarCampoTLV('05', txId);
+            payload += formatarCampoTLV('62', campoTxId);
+
+            // 63: CRC16 (Calculado sobre toda a string anterior + '6304')
+            payload += '6304';
+            const crc = calcularCRC16(payload);
+            
+            return payload + crc;
+        }
+
+        // Função auxiliar segura para formatação de campos
+        function formatarTLV(id, valor) {
+            return formatarCampoTLV(id, valor);
+        }
+
+        /* -------------------------------------------------------------------------- */
+        /* 3. LISTA COMPLETA DOS PRESENTES DIVERTIDOS                                */
+        /* -------------------------------------------------------------------------- */
+        const LISTA_PRESENTES = [
+            {
+                id: 1,
+                nome: "Lenço para a noiva não borrar toda a maquiagem",
+                preco: 25.00,
+                categoria: "ate50",
+                icone: "fa-solid fa-toilet-paper",
+                tag: "Indispensável"
+            },
+            {
+                id: 2,
+                nome: "Maracujina para os noivos ficarem calmos",
+                preco: 35.00,
+                categoria: "ate50",
+                icone: "fa-solid fa-pills",
+                tag: "Sossegados"
+            },
+            {
+                id: 3,
+                nome: "Conjunto de controles remotos para não ter briga",
+                preco: 40.00,
+                categoria: "ate50",
+                icone: "fa-solid fa-tv",
+                tag: "Paz em Casa"
+            },
+            {
+                id: 4,
+                nome: "Capacete contra rolo de macarrão para o noivo",
+                preco: 50.00,
+                categoria: "ate50",
+                icone: "fa-solid fa-helmet-safety",
+                tag: "Segurança"
+            },
+            {
+                id: 5,
+                nome: "Rolo de macarrão caso o noivo não se comporte",
+                preco: 65.00,
+                categoria: "50a100",
+                icone: "fa-solid fa-utensils",
+                tag: "Disciplina"
+            },
+            {
+                id: 6,
+                nome: "Cota para descobrirmos quem realmente manda na casa",
+                preco: 80.00,
+                categoria: "50a100",
+                icone: "fa-solid fa-crown",
+                tag: "Mistério"
+            },
+            {
+                id: 7,
+                nome: "Ajude os noivos a comprar paciência em parcelas",
+                preco: 95.00,
+                categoria: "50a100",
+                icone: "fa-solid fa-heart-pulse",
+                tag: "Mais Vendido"
+            },
+            {
+                id: 8,
+                nome: "Aluguel de um bebê para treinamento",
+                preco: 120.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-baby",
+                tag: "Futuro"
+            },
+            {
+                id: 9,
+                nome: "Ajude os recém-casados a fugir da realidade por alguns dias",
+                preco: 130.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-plane-departure",
+                tag: "Lua de Mel"
+            },
+            {
+                id: 10,
+                nome: "Um vestido para a noiva dizer: 'amor, eu não tinha nenhum parecido'",
+                preco: 135.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-shirt",
+                tag: "Moda Noiva"
+            },
+            {
+                id: 11,
+                nome: "Um ano de barba feita para o noivo",
+                preco: 150.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-scissors",
+                tag: "Estilo"
+            },
+            {
+                id: 12,
+                nome: "Prioridade no quarto de visita na casa dos noivos",
+                preco: 180.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-bed",
+                tag: "VIP"
+            },
+            {
+                id: 13,
+                nome: "Contribuição para uma decoração que provavelmente a noiva vai escolher",
+                preco: 200.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-couch",
+                tag: "Lar Doce Lar"
+            },
+            {
+                id: 14,
+                nome: "Cota lendária: 'Hoje eu acordei generoso'",
+                preco: 300.00,
+                categoria: "acima100",
+                icone: "fa-solid fa-gem",
+                tag: "Lendário"
+            }
+        ];
+
+        /* -------------------------------------------------------------------------- */
+        /* 4. CRONÔMETRO DE CONTAGEM REGRESSIVA (TEMPO REAL)                         */
+        /* -------------------------------------------------------------------------- */
+        function atualizarContagemRegressiva() {
+            const agora = new Date().getTime();
+            const diferenca = CONFIG_CASAMENTO.dataCasamento.getTime() - agora;
+
+            if (diferenca > 0) {
+                const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+                document.getElementById("dias").innerText = String(dias).padStart(2, '0');
+                document.getElementById("horas").innerText = String(horas).padStart(2, '0');
+                document.getElementById("minutos").innerText = String(minutos).padStart(2, '0');
+                document.getElementById("segundos").innerText = String(segundos).padStart(2, '0');
+            } else {
+                document.getElementById("dias").innerText = "00";
+                document.getElementById("horas").innerText = "00";
+                document.getElementById("minutos").innerText = "00";
+                document.getElementById("segundos").innerText = "00";
+            }
+        }
+        setInterval(atualizarContagemRegressiva, 1000);
+        atualizarContagemRegressiva();
+
+        /* -------------------------------------------------------------------------- */
+        /* 5. RENDERIZAÇÃO E FILTRAGEM DOS PRESENTES                                 */
+        /* -------------------------------------------------------------------------- */
+        const gradePresentes = document.getElementById("gradePresentes");
+
+        function renderizarPresentes(lista) {
+            gradePresentes.innerHTML = "";
+            lista.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "presente-card";
+                card.innerHTML = `
+                    <div class="presente-imagem">
+                        <span class="presente-tag">${item.tag}</span>
+                        <i class="${item.icone}"></i>
+                    </div>
+                    <div class="presente-corpo">
+                        <h4 class="presente-titulo">${item.nome}</h4>
+                        <div class="presente-preco-box">
+                            <div class="presente-preco-label">Valor Simbólico</div>
+                            <div class="presente-preco-valor">R$ ${item.preco.toFixed(2).replace('.', ',')}</div>
+                        </div>
+                        <button class="btn-presentear" onclick="abrirModalPresente(${item.id})">
+                            <i class="fa-brands fa-pix"></i> Presentear
+                        </button>
+                    </div>
+                `;
+                gradePresentes.appendChild(card);
+            });
+        }
+
+        function filtrarPresentes(categoria) {
+            document.querySelectorAll(".filtro-btn").forEach(btn => btn.classList.remove("active"));
+            event.target.classList.add("active");
+
+            if (categoria === "todos") {
+                renderizarPresentes(LISTA_PRESENTES);
+            } else {
+                const filtrados = LISTA_PRESENTES.filter(item => item.categoria === categoria);
+                renderizarPresentes(filtrados);
+            }
+        }
+
+        // Renderiza todos os presentes inicialmente
+        renderizarPresentes(LISTA_PRESENTES);
+
+        /* -------------------------------------------------------------------------- */
+        /* 6. MODAL DE PAGAMENTO VIA PIX COM BR CODE OFICIAL (100% VÁLIDO)           */
+        /* -------------------------------------------------------------------------- */
+        let itemSelecionadoAtual = null;
+
+        function abrirModalPresente(idItem) {
+            itemSelecionadoAtual = LISTA_PRESENTES.find(item => item.id === idItem);
+            if (!itemSelecionadoAtual) return;
+
+            document.getElementById("modalNomeItem").innerText = itemSelecionadoAtual.nome;
+            document.getElementById("modalValorItem").innerText = `R$ ${itemSelecionadoAtual.preco.toFixed(2).replace('.', ',')}`;
+            
+            // Exibe a chave simples no campo correspondente
+            document.getElementById("inputPixChaveSimples").value = CONFIG_CASAMENTO.chavePix;
+
+            // Gera o Payload Oficial do PIX (BR Code / EMV)
+            const payloadOficial = gerarBRCodePix({
+                chave: CONFIG_CASAMENTO.chavePix,
+                nome: CONFIG_CASAMENTO.nomeBeneficiario,
+                cidade: CONFIG_CASAMENTO.cidadeBeneficiario,
+                valor: itemSelecionadoAtual.preco,
+                txId: `PRESENTE${itemSelecionadoAtual.id}`
+            });
+
+            // Coloca o código completo no campo Copia e Cola
+            document.getElementById("inputPixPayload").value = payloadOficial;
+
+            // Gera o QR Code oficial escaneável por QUALQUER aplicativo de banco
+            const qrContainer = document.getElementById("qrcodePix");
+            qrContainer.innerHTML = "";
+            new QRCode(qrContainer, {
+                text: payloadOficial,
+                width: 170,
+                height: 170,
+                colorDark: "#1a1a1a",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.M
+            });
+
+            document.getElementById("modalPresente").classList.add("active");
+        }
+
+        function fecharModalPresente() {
+            document.getElementById("modalPresente").classList.remove("active");
+            document.getElementById("formMensagemPresente").reset();
+        }
+
+        // Copia o código PIX Copia e Cola Oficial (BR Code)
+        function copiarPixPayload() {
+            const input = document.getElementById("inputPixPayload");
+            input.select();
+            input.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(input.value);
+
+            const btn = document.getElementById("btnCopiarPayload");
+            btn.classList.add("copiado");
+            btn.innerHTML = `<i class="fa-solid fa-check"></i> Código Copiado!`;
+            setTimeout(() => {
+                btn.classList.remove("copiado");
+                btn.innerHTML = `<i class="fa-regular fa-copy"></i> Copiar Código`;
+            }, 2500);
+        }
+
+        // Copia apenas a chave simples (número de telefone)
+        function copiarChaveSimples() {
+            const input = document.getElementById("inputPixChaveSimples");
+            input.select();
+            input.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(input.value);
+
+            const btn = document.getElementById("btnCopiarChaveSimples");
+            btn.classList.add("copiado");
+            btn.innerHTML = `<i class="fa-solid fa-check"></i> Chave Copiada!`;
+            setTimeout(() => {
+                btn.classList.remove("copiado");
+                btn.innerHTML = `<i class="fa-regular fa-copy"></i> Copiar Chave`;
+            }, 2500);
+        }
+
+        async function finalizarPresente(e) {
+            e.preventDefault();
+            const btnSubmit = e.target.querySelector("button[type='submit']");
+            const nome = document.getElementById("nomeConvidadoPresente").value.trim();
+            const recado = document.getElementById("recadoPresente").value.trim();
+            const presente = itemSelecionadoAtual ? itemSelecionadoAtual.nome : "Presente Simbólico";
+            const valor = itemSelecionadoAtual ? itemSelecionadoAtual.preco : 0;
+            const dataHora = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+
+            // 1. Salva backup local no navegador
+            try {
+                const historico = JSON.parse(localStorage.getItem("presentes_casamento") || "[]");
+                historico.push({ dataHora, nome, presente, valor, recado });
+                localStorage.setItem("presentes_casamento", JSON.stringify(historico));
+            } catch (err) {
+                console.log("Aviso ao salvar localmente:", err);
+            }
+
+            // 2. Animação de envio no botão
+            if (btnSubmit) {
+                btnSubmit.disabled = true;
+                btnSubmit.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Registrando presente...`;
+            }
+
+            // 3. Envia os dados para a planilha Google Sheets dos noivos
+            if (CONFIG_CASAMENTO.Sheets && COurlGoogleNFIG_CASAMENTO.urlGoogleSheets.startsWith("http")) {
+                try {
+                    await fetch(CONFIG_CASAMENTO.urlGoogleSheets, {
+                        method: "POST",
+                        mode: "no-cors", // Permite envio direto sem bloqueios de CORS pelo Google
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            nome: nome,
+                            presente: presente,
+                            valor: valor,
+                            mensagem: recado,
+                            dataHora: dataHora
+                        })
+                    });
+                } catch (erroEnvio) {
+                    console.log("Aviso no envio ao Sheets:", erroEnvio);
+                }
+            }
+
+            // 4. Mensagem de agradecimento
+            alert(`Muito obrigado pelo carinho, ${nome}! Seu presente de "${presente}" (R$ ${valor.toFixed(2).replace('.', ',')}) foi registrado com sucesso! Os noivos agradecem de coração! ❤️`);
+
+            if (btnSubmit) {
+                btnSubmit.disabled = false;
+                btnSubmit.innerHTML = `<i class="fa-solid fa-heart"></i> Concluir Presente`;
+            }
+
+            fecharModalPresente();
+        }
+    </script>
+</body>
+</html>
