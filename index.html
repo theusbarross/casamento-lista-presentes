@@ -419,12 +419,27 @@
         }
 
         .presente-imagem {
-            height: 160px;
+            width: 100%;
+            height: 180px;
             background: #f7f3ec;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .presente-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .presente-card:hover .presente-imagem img {
+            transform: scale(1.08);
         }
 
         .presente-imagem i {
@@ -450,6 +465,7 @@
             border-radius: 20px;
             text-transform: uppercase;
             box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            z-index: 2;
         }
 
         .presente-corpo {
@@ -757,7 +773,7 @@
         .footer-quote {
             font-family: var(--fonte-serifa);
             font-style: italic;
-            font-size: 1.25rem;
+            font-size: 1.75rem;
             color: var(--cor-texto-suave);
             max-width: 600px;
             margin: 0 auto 20px auto;
@@ -1086,6 +1102,7 @@
                 nome: "Lenço para a noiva não borrar toda a maquiagem",
                 preco: 25.00,
                 categoria: "ate50",
+                imagem: "imagens/presente-1.jpg",
                 icone: "fa-solid fa-toilet-paper",
                 tag: "Indispensável"
             },
@@ -1094,6 +1111,7 @@
                 nome: "Maracujina para os noivos ficarem calmos",
                 preco: 35.00,
                 categoria: "ate50",
+                imagem: "imagens/presente-2.jpg",
                 icone: "fa-solid fa-pills",
                 tag: "Sossegados"
             },
@@ -1102,6 +1120,7 @@
                 nome: "Conjunto de controles remotos para não ter briga",
                 preco: 40.00,
                 categoria: "ate50",
+                imagem: "imagens/presente-3.jpg",
                 icone: "fa-solid fa-tv",
                 tag: "Paz em Casa"
             },
@@ -1110,6 +1129,7 @@
                 nome: "Capacete contra rolo de macarrão para o noivo",
                 preco: 50.00,
                 categoria: "ate50",
+                imagem: "imagens/presente-4.jpg",
                 icone: "fa-solid fa-helmet-safety",
                 tag: "Segurança"
             },
@@ -1118,6 +1138,7 @@
                 nome: "Rolo de macarrão caso o noivo não se comporte",
                 preco: 65.00,
                 categoria: "50a100",
+                imagem: "imagens/presente-5.jpg",
                 icone: "fa-solid fa-utensils",
                 tag: "Disciplina"
             },
@@ -1126,6 +1147,7 @@
                 nome: "Cota para descobrirmos quem realmente manda na casa",
                 preco: 80.00,
                 categoria: "50a100",
+                imagem: "imagens/presente-6.jpg",
                 icone: "fa-solid fa-crown",
                 tag: "Mistério"
             },
@@ -1134,6 +1156,7 @@
                 nome: "Ajude os noivos a comprar paciência em parcelas",
                 preco: 95.00,
                 categoria: "50a100",
+                imagem: "imagens/presente-7.jpg",
                 icone: "fa-solid fa-heart-pulse",
                 tag: "Mais Vendido"
             },
@@ -1142,6 +1165,7 @@
                 nome: "Aluguel de um bebê para treinamento",
                 preco: 120.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-8.jpg",
                 icone: "fa-solid fa-baby",
                 tag: "Futuro"
             },
@@ -1150,6 +1174,7 @@
                 nome: "Ajude os recém-casados a fugir da realidade por alguns dias",
                 preco: 130.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-9.jpg",
                 icone: "fa-solid fa-plane-departure",
                 tag: "Lua de Mel"
             },
@@ -1158,6 +1183,7 @@
                 nome: "Um vestido para a noiva dizer: 'amor, eu não tinha nenhum parecido'",
                 preco: 135.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-10.jpg",
                 icone: "fa-solid fa-shirt",
                 tag: "Moda Noiva"
             },
@@ -1166,6 +1192,7 @@
                 nome: "Um ano de barba feita para o noivo",
                 preco: 150.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-11.jpg",
                 icone: "fa-solid fa-scissors",
                 tag: "Estilo"
             },
@@ -1174,6 +1201,7 @@
                 nome: "Prioridade no quarto de visita na casa dos noivos",
                 preco: 180.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-12.jpg",
                 icone: "fa-solid fa-bed",
                 tag: "VIP"
             },
@@ -1182,6 +1210,7 @@
                 nome: "Contribuição para uma decoração que provavelmente a noiva vai escolher",
                 preco: 200.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-13.jpg",
                 icone: "fa-solid fa-couch",
                 tag: "Lar Doce Lar"
             },
@@ -1190,6 +1219,7 @@
                 nome: "Cota lendária: 'Hoje eu acordei generoso'",
                 preco: 300.00,
                 categoria: "acima100",
+                imagem: "imagens/presente-14.jpg",
                 icone: "fa-solid fa-gem",
                 tag: "Lendário"
             }
@@ -1232,10 +1262,19 @@
             lista.forEach(item => {
                 const card = document.createElement("div");
                 card.className = "presente-card";
+                
+                // Mídia: exibe imagem com fallback automático para ícone se não carregar ou não existir
+                const midiaHtml = item.imagem ? `
+                    <img src="${item.imagem}" alt="${item.nome}" loading="lazy" onerror="this.style.display='none'; const ic = this.nextElementSibling; if(ic) ic.style.display='block';">
+                    <i class="${item.icone || 'fa-solid fa-gift'}" style="display: none;"></i>
+                ` : `
+                    <i class="${item.icone || 'fa-solid fa-gift'}"></i>
+                `;
+
                 card.innerHTML = `
                     <div class="presente-imagem">
                         <span class="presente-tag">${item.tag}</span>
-                        <i class="${item.icone}"></i>
+                        ${midiaHtml}
                     </div>
                     <div class="presente-corpo">
                         <h4 class="presente-titulo">${item.nome}</h4>
@@ -1371,7 +1410,7 @@
             }
 
             // 3. Envia os dados para a planilha Google Sheets dos noivos
-            if (CONFIG_CASAMENTO.Sheets && COurlGoogleNFIG_CASAMENTO.urlGoogleSheets.startsWith("http")) {
+            if (CONFIG_CASAMENTO.urlGoogleSheets && CONFIG_CASAMENTO.urlGoogleSheets.startsWith("http")) {
                 try {
                     await fetch(CONFIG_CASAMENTO.urlGoogleSheets, {
                         method: "POST",

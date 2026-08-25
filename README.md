@@ -17,6 +17,8 @@ O código está estruturado em um único arquivo ([`index.html`](file:///d:/Proj
    - Calcula e atualiza automaticamente os **Dias**, **Horas**, **Minutos** e **Segundos** até o casamento.
 
 3. **Lista de Presentes Divertida com PIX Oficial (Banco Central)**:
+   - Suporte completo a **fotos personalizadas dos presentes** na pasta `imagens/` com tamanho fixo, sem distorção (`object-fit: cover`) e efeito de zoom elegante ao passar o mouse.
+   - Fallback automático: caso a foto de um item ainda não tenha sido adicionada, o ícone estilizado é exibido perfeitamente sem quebrar a página.
    - Texto de introdução descontraído do casal explicando os presentes simbólicos.
    - Filtros por valor: *Todos*, *Até R$ 50*, *R$ 50 a R$ 100* e *Acima de R$ 100*.
    - 14 opções de presentes bem-humorados.
