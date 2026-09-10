@@ -5,8 +5,7 @@
  * 
  * COMO INSTALAR EM 1 MINUTO NA SUA PLANILHA:
  * 
- * 1. Abra a sua planilha do Google Sheets:
- *    https://docs.google.com/spreadsheets/d/1bNhbLeX0i8H2wIf7YEX3IvTUaV456I1hf09S-s96cHs/edit
+ * 1. Crie uma nova planilha no Google Sheets ou abra uma existente.
  * 
  * 2. No menu superior da planilha, clique em:
  *    "Extensões" (Extensions) > "Apps Script"
